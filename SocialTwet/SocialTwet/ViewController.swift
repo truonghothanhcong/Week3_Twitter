@@ -8,17 +8,37 @@
 
 import UIKit
 import BDBOAuth1Manager
+import PulsingHalo
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var facebookLoginLabel: UILabel!
+    @IBOutlet weak var lolLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        initHalo()
+    }
+    
+    func initHalo() {
+        let halo = PulsingHaloLayer()
+        halo.haloLayerNumber = 2
+        halo.radius = self.view.frame.width / 3
+        halo.backgroundColor = UIColor.white.cgColor
+        halo.position = view.center
+        view.layer.addSublayer(halo)
+        halo.start()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func loginFacebook(_ sender: AnyObject) {
+        lolLabel.isHidden = false
     }
 
     @IBAction func onLogin(_ sender: AnyObject) {

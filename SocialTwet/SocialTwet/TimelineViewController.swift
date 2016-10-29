@@ -23,6 +23,12 @@ class TimelineViewController: UIViewController, TypeTweetViewControllerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // add icon twitter
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "twitter")
+        self.navigationItem.titleView = imageView
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -108,6 +114,15 @@ class TimelineViewController: UIViewController, TypeTweetViewControllerDelegate 
             detailTweetVC.tweet = tweetArray[indexPath!.row]
         }
     }
+    
+    @IBAction func doubleTapToFavorite(_ sender: UITapGestureRecognizer) {
+        let p = sender.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: p)
+        let cell = tableView.cellForRow(at: indexPath!)
+        
+        onFavoriteClick(tweetCell: cell as! TweetCell)
+    }
+    
     
     func addNewTweet(typeTweetViewController: TypeTweetViewController, tweetText: String) {
         let newTweet = createNewTweet(textTweet: tweetText)
