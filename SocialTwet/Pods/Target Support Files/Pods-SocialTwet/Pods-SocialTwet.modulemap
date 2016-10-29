@@ -1,0 +1,6 @@
+framework module Pods_SocialTwet {
+  umbrella header "Pods-SocialTwet-umbrella.h"
+
+  export *
+  module * { export * }
+}

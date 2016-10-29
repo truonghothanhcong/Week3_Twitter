@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A31165C137121B0BAFBA6356 /* Pods_SocialTwet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65AD30D338DEE509F6F44E7 /* Pods_SocialTwet.framework */; };
+		F47370181DC2EC7000B67086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47370171DC2EC7000B67086 /* AppDelegate.swift */; };
+		F473701A1DC2EC7000B67086 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47370191DC2EC7000B67086 /* ViewController.swift */; };
+		F473701D1DC2EC7000B67086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F473701B1DC2EC7000B67086 /* Main.storyboard */; };
+		F473701F1DC2EC7000B67086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F473701E1DC2EC7000B67086 /* Assets.xcassets */; };
+		F47370221DC2EC7000B67086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47370201DC2EC7000B67086 /* LaunchScreen.storyboard */; };
+		F473702E1DC3033F00B67086 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F473702D1DC3033F00B67086 /* User.swift */; };
+		F47370301DC3035900B67086 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F473702F1DC3035900B67086 /* Tweet.swift */; };
+		F47370321DC30A7E00B67086 /* ClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47370311DC30A7E00B67086 /* ClientApi.swift */; };
+		F47370341DC311E700B67086 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47370331DC311E700B67086 /* TimelineViewController.swift */; };
+		F47370381DC33CC600B67086 /* DetailTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47370371DC33CC600B67086 /* DetailTweetViewController.swift */; };
+		F4DA63E91DC47A29001E0D46 /* TypeTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA63E81DC47A29001E0D46 /* TypeTweetViewController.swift */; };
+		F4DA63EB1DC49B33001E0D46 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA63EA1DC49B33001E0D46 /* TweetCell.swift */; };
+		F4DA63ED1DC4B06B001E0D46 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA63EC1DC4B06B001E0D46 /* InfiniteScrollActivityView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		41297B4C1544FB33191CA8A0 /* Pods-SocialTwet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialTwet.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialTwet/Pods-SocialTwet.release.xcconfig"; sourceTree = "<group>"; };
+		B5ACA8AAA860867CFA6E7724 /* Pods-SocialTwet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialTwet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialTwet/Pods-SocialTwet.debug.xcconfig"; sourceTree = "<group>"; };
+		B65AD30D338DEE509F6F44E7 /* Pods_SocialTwet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialTwet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47370141DC2EC7000B67086 /* SocialTwet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialTwet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47370171DC2EC7000B67086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F47370191DC2EC7000B67086 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F473701C1DC2EC7000B67086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F473701E1DC2EC7000B67086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F47370211DC2EC7000B67086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F47370231DC2EC7000B67086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F473702D1DC3033F00B67086 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F473702F1DC3035900B67086 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		F47370311DC30A7E00B67086 /* ClientApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientApi.swift; sourceTree = "<group>"; };
+		F47370331DC311E700B67086 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		F47370371DC33CC600B67086 /* DetailTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTweetViewController.swift; sourceTree = "<group>"; };
+		F4DA63E81DC47A29001E0D46 /* TypeTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTweetViewController.swift; sourceTree = "<group>"; };
+		F4DA63EA1DC49B33001E0D46 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		F4DA63EC1DC4B06B001E0D46 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F47370111DC2EC7000B67086 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A31165C137121B0BAFBA6356 /* Pods_SocialTwet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18BAB296D0F50E270D31C5A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5ACA8AAA860867CFA6E7724 /* Pods-SocialTwet.debug.xcconfig */,
+				41297B4C1544FB33191CA8A0 /* Pods-SocialTwet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		76ED51E9B6FA8BC4851F4ABB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B65AD30D338DEE509F6F44E7 /* Pods_SocialTwet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F473700B1DC2EC7000B67086 = {
+			isa = PBXGroup;
+			children = (
+				F47370161DC2EC7000B67086 /* SocialTwet */,
+				F47370151DC2EC7000B67086 /* Products */,
+				18BAB296D0F50E270D31C5A9 /* Pods */,
+				76ED51E9B6FA8BC4851F4ABB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F47370151DC2EC7000B67086 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F47370141DC2EC7000B67086 /* SocialTwet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F47370161DC2EC7000B67086 /* SocialTwet */ = {
+			isa = PBXGroup;
+			children = (
+				F473702C1DC3031A00B67086 /* View */,
+				F473702B1DC3030800B67086 /* Controller */,
+				F473702A1DC302FA00B67086 /* API */,
+				F47370291DC302EE00B67086 /* Model */,
+				F47370171DC2EC7000B67086 /* AppDelegate.swift */,
+				F473701B1DC2EC7000B67086 /* Main.storyboard */,
+				F473701E1DC2EC7000B67086 /* Assets.xcassets */,
+				F47370201DC2EC7000B67086 /* LaunchScreen.storyboard */,
+				F47370231DC2EC7000B67086 /* Info.plist */,
+			);
+			path = SocialTwet;
+			sourceTree = "<group>";
+		};
+		F47370291DC302EE00B67086 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F473702D1DC3033F00B67086 /* User.swift */,
+				F473702F1DC3035900B67086 /* Tweet.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F473702A1DC302FA00B67086 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F47370311DC30A7E00B67086 /* ClientApi.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		F473702B1DC3030800B67086 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F47370191DC2EC7000B67086 /* ViewController.swift */,
+				F47370331DC311E700B67086 /* TimelineViewController.swift */,
+				F47370371DC33CC600B67086 /* DetailTweetViewController.swift */,
+				F4DA63E81DC47A29001E0D46 /* TypeTweetViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F473702C1DC3031A00B67086 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4DA63EC1DC4B06B001E0D46 /* InfiniteScrollActivityView.swift */,
+				F4DA63EA1DC49B33001E0D46 /* TweetCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F47370131DC2EC7000B67086 /* SocialTwet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F47370261DC2EC7000B67086 /* Build configuration list for PBXNativeTarget "SocialTwet" */;
+			buildPhases = (
+				B37AFA5944F10B01A8E6C13D /* [CP] Check Pods Manifest.lock */,
+				F47370101DC2EC7000B67086 /* Sources */,
+				F47370111DC2EC7000B67086 /* Frameworks */,
+				F47370121DC2EC7000B67086 /* Resources */,
+				CC9FDA2A2CE836C70DDCF3AA /* [CP] Embed Pods Frameworks */,
+				C54F74870BFB9FC9A93BF559 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialTwet;
+			productName = SocialTwet;
+			productReference = F47370141DC2EC7000B67086 /* SocialTwet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F473700C1DC2EC7000B67086 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = congtruong;
+				TargetAttributes = {
+					F47370131DC2EC7000B67086 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5TJXL29536;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F473700F1DC2EC7000B67086 /* Build configuration list for PBXProject "SocialTwet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F473700B1DC2EC7000B67086;
+			productRefGroup = F47370151DC2EC7000B67086 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F47370131DC2EC7000B67086 /* SocialTwet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F47370121DC2EC7000B67086 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47370221DC2EC7000B67086 /* LaunchScreen.storyboard in Resources */,
+				F473701F1DC2EC7000B67086 /* Assets.xcassets in Resources */,
+				F473701D1DC2EC7000B67086 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B37AFA5944F10B01A8E6C13D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C54F74870BFB9FC9A93BF559 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialTwet/Pods-SocialTwet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC9FDA2A2CE836C70DDCF3AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialTwet/Pods-SocialTwet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F47370101DC2EC7000B67086 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4DA63ED1DC4B06B001E0D46 /* InfiniteScrollActivityView.swift in Sources */,
+				F473701A1DC2EC7000B67086 /* ViewController.swift in Sources */,
+				F47370181DC2EC7000B67086 /* AppDelegate.swift in Sources */,
+				F4DA63E91DC47A29001E0D46 /* TypeTweetViewController.swift in Sources */,
+				F4DA63EB1DC49B33001E0D46 /* TweetCell.swift in Sources */,
+				F473702E1DC3033F00B67086 /* User.swift in Sources */,
+				F47370321DC30A7E00B67086 /* ClientApi.swift in Sources */,
+				F47370301DC3035900B67086 /* Tweet.swift in Sources */,
+				F47370381DC33CC600B67086 /* DetailTweetViewController.swift in Sources */,
+				F47370341DC311E700B67086 /* TimelineViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F473701B1DC2EC7000B67086 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F473701C1DC2EC7000B67086 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F47370201DC2EC7000B67086 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F47370211DC2EC7000B67086 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F47370241DC2EC7000B67086 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F47370251DC2EC7000B67086 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F47370271DC2EC7000B67086 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5ACA8AAA860867CFA6E7724 /* Pods-SocialTwet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5TJXL29536;
+				INFOPLIST_FILE = SocialTwet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = congtruong.SocialTwet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F47370281DC2EC7000B67086 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41297B4C1544FB33191CA8A0 /* Pods-SocialTwet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5TJXL29536;
+				INFOPLIST_FILE = SocialTwet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = congtruong.SocialTwet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F473700F1DC2EC7000B67086 /* Build configuration list for PBXProject "SocialTwet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47370241DC2EC7000B67086 /* Debug */,
+				F47370251DC2EC7000B67086 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F47370261DC2EC7000B67086 /* Build configuration list for PBXNativeTarget "SocialTwet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47370271DC2EC7000B67086 /* Debug */,
+				F47370281DC2EC7000B67086 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F473700C1DC2EC7000B67086 /* Project object */;
+}
