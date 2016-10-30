@@ -37,7 +37,7 @@ class TweetCell: UITableViewCell {
             }
             nameLabel.text = tweet.userName
             screenNameLabel.text = "@\(tweet.screenName!)"
-            timeLabel.text = "1h"
+            timeLabel.text = tweet.timetamp!
             tweetTextLabel.text = tweet.tweetText
             favoriteImageView.image = tweet.favorited! ? UIImage(named: "like_on") : UIImage(named: "like_off")
             favoriteCountLabel.text = "\(tweet.favoriteCount!)"

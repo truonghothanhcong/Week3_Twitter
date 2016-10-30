@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NSDate_TimeAgo
 
 class Tweet: NSObject {
     var userProfilePicture: URL?
@@ -21,7 +22,7 @@ class Tweet: NSObject {
     var retweeted: Bool?
     var id: Int?
     
-    var timetamp: Date?
+    var timetamp: String?
     
     init(tweetDictionary: NSDictionary) {
         // get info user
@@ -51,7 +52,7 @@ class Tweet: NSObject {
             
             let formater = DateFormatter()
             formater.dateFormat = "EEE MMM d HH:mm:ss Z y"
-            self.timetamp = formater.date(from: createAt)
+            self.timetamp = (formater.date(from: createAt) as NSDate?)?.timeAgo() ?? ""
         }
         
         // get info about reaction of tweet

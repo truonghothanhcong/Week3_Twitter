@@ -42,7 +42,7 @@ class DetailTweetViewController: UIViewController {
         let dateformatter = DateFormatter()
         dateformatter.dateStyle = .short
         dateformatter.timeStyle = .short
-        let time = dateformatter.string(from: tweet.timetamp!)
+        let time = tweet.timetamp!
         timeLabel.text = time
         
         // tweet count

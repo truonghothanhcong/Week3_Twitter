@@ -87,11 +87,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BDBOAuth1Manager/BDBOAuth1Manager.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/NSDate+TimeAgo/NSDate_TimeAgo.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PulsingHalo/PulsingHalo.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BDBOAuth1Manager/BDBOAuth1Manager.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/NSDate+TimeAgo/NSDate_TimeAgo.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PulsingHalo/PulsingHalo.framework"
 fi

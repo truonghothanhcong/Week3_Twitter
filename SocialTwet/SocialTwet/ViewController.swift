@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var facebookLoginLabel: UILabel!
     @IBOutlet weak var lolLabel: UILabel!
+    @IBOutlet weak var LOLImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
     
     @IBAction func loginFacebook(_ sender: AnyObject) {
         lolLabel.isHidden = false
+        LOLImageView.isHidden = false
     }
 
     @IBAction func onLogin(_ sender: AnyObject) {
@@ -51,6 +53,7 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-
 }
+
+
 
