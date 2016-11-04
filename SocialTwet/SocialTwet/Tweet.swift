@@ -14,6 +14,7 @@ class Tweet: NSObject {
     var userBannerPicture: URL?
     var userName: String?
     var screenName: String?
+    var userId: Int?
     var tweetText: String?
     var createAt: String?
     var favoriteCount: Int?
@@ -40,6 +41,9 @@ class Tweet: NSObject {
             }
             if let screenName = user["screen_name"] as? String {
                 self.screenName = screenName
+            }
+            if let userId = user["id"] as? Int {
+                self.userId = userId
             }
         }
         

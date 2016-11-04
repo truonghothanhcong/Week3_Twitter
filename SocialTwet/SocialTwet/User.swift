@@ -14,8 +14,9 @@ class User: NSObject {
     var name: String?
     var favouritesCount: Int?
     var followersCount: Int?
-    var following: Int?
+    var followingCount: Int?
     var friendsCount: Int?
+    var statusesCount: Int?
     var idStr: String?
     var profileBackgroundImageUrl: URL?
     var profileImageUrl: URL?
@@ -26,6 +27,8 @@ class User: NSObject {
     
     init(userDictionary: NSDictionary) {
         self.userDictionary = userDictionary
+        
+        print(userDictionary["following"]!)
         
         userID = userDictionary["id"] as? NSNumber ?? 0
         
@@ -38,8 +41,8 @@ class User: NSObject {
         if let followersCount = userDictionary["followers_count"] as? Int {
             self.followersCount = followersCount
         }
-        if let following = userDictionary["following"] as? Int {
-            self.following = following
+        if let following = userDictionary["friends_count"] as? Int {
+            self.followingCount = following
         }
         if let friendsCount = userDictionary["friends_count"] as? Int {
             self.friendsCount = friendsCount
@@ -47,7 +50,7 @@ class User: NSObject {
         if let idStr = userDictionary["id_str"] as? String {
             self.idStr = idStr
         }
-        if let profileBackgroundImageUrl = userDictionary["profile_background_image_url_https"] as? String {
+        if let profileBackgroundImageUrl = userDictionary["profile_banner_url"] as? String {
             self.profileBackgroundImageUrl = URL(string: profileBackgroundImageUrl)
         }
         if let profileImageUrl = userDictionary["profile_image_url_https"] as? String {
@@ -55,6 +58,9 @@ class User: NSObject {
         }
         if let screenName = userDictionary["screen_name"] as? String {
             self.screenName = screenName
+        }
+        if let statusCount = userDictionary["statuses_count"] as? Int {
+            self.statusesCount = statusCount
         }
     }
     
@@ -71,7 +77,7 @@ class User: NSObject {
                 if let userData = userData {
                     let dictionary = try! JSONSerialization.jsonObject(with: userData as Data, options: []) as! NSDictionary
                     _currentUser = User(userDictionary: dictionary)
-                    print(_currentUser?.name)
+                    print(_currentUser?.name ?? "no name")
                 }
             }
             

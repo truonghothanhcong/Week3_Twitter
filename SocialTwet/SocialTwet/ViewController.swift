@@ -12,10 +12,6 @@ import PulsingHalo
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var facebookLoginLabel: UILabel!
-    @IBOutlet weak var lolLabel: UILabel!
-    @IBOutlet weak var LOLImageView: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,11 +33,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func loginFacebook(_ sender: AnyObject) {
-        lolLabel.isHidden = false
-        LOLImageView.isHidden = false
-    }
 
     @IBAction func onLogin(_ sender: AnyObject) {
         let client = ClientApi.shareInstance
@@ -52,6 +43,15 @@ class ViewController: UIViewController {
         }) { (error: Error) in
             print(error.localizedDescription)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let menuViewController = storyboard.instantiateViewController(withIdentifier: "menuViewController") as! MenuViewController
+        let hamburgerViewController = segue.destination as! HamburgerViewController
+        
+        menuViewController.hamburgerViewController = hamburgerViewController
+        hamburgerViewController.menuViewController = menuViewController
     }
 }
 

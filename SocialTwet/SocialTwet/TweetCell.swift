@@ -12,6 +12,7 @@ import UIKit
     @objc optional func onFavoriteClick(tweetCell: TweetCell)
     @objc optional func onRetweetClick(tweetCell: TweetCell)
     @objc optional func onReplyClick(tweetCell: TweetCell)
+    @objc optional func showProfileUser(tweetCell: TweetCell)
 }
 
 class TweetCell: UITableViewCell {
@@ -57,6 +58,10 @@ class TweetCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func showUserProfile(_ sender: UIButton) {
+        delegate?.showProfileUser!(tweetCell: self)
     }
 
     @IBAction func onFavoriteClick(_ sender: AnyObject) {

@@ -16,7 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//        // Override point for customization after application launch.
+//        let hamburgerViewController = window?.rootViewController as! HamburgerViewController
+//        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let menuViewController = storyboard.instantiateViewController(withIdentifier: "menuViewController") as! MenuViewController
+//        
+//        menuViewController.hamburgerViewController = hamburgerViewController
+//        hamburgerViewController.menuViewController = menuViewController
+        
+        
         if User.currentUser != nil {
             print("user not nil")
             let data = UserDefaults.standard.object(forKey: ClientApi.accessTokenKey) as? Data
@@ -24,7 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ClientApi.shareInstance.requestSerializer.saveAccessToken(token)
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "timelineNavigationController")
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "hamburgerViewController")
+            
+            let hamburgerViewController = window?.rootViewController as! HamburgerViewController
+            
+            let menuViewController = storyboard.instantiateViewController(withIdentifier: "menuViewController") as! MenuViewController
+            
+            menuViewController.hamburgerViewController = hamburgerViewController
+            hamburgerViewController.menuViewController = menuViewController
         }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: User.userLogoutEvent), object: nil, queue: OperationQueue.main) { (Notification) in

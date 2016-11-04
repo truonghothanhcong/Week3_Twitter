@@ -52,7 +52,6 @@ class ClientApi: BDBOAuth1SessionManager {
             })
             
             }, failure: { (error: Error?) in
-                print(error?.localizedDescription)
                 self.loginFailure?(error!)
         })
     }
@@ -82,6 +81,34 @@ class ClientApi: BDBOAuth1SessionManager {
         })
     }
     
+    func userInfomationWith(userId: Int, handleSuccess: @escaping (_ user: User) -> Void) {
+        var params = [String: Any]()
+        params["user_id"] = userId
+        
+        get("/1.1/users/lookup.json", parameters: params, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            let userDic = response as! [NSDictionary]
+            
+            print(userDic)
+            let user = User(userDictionary: userDic[0])
+            handleSuccess(user)
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            print(error.localizedDescription)
+        })
+    }
+    
+    func userTimeline(userId: Int, success: @escaping (_ tweetArray: [Tweet]) -> (), failure: @escaping (_ error: Error) -> ()) {
+        var params = [String: Any]()
+        params["user_id"] = userId
+        
+        get("/1.1/statuses/user_timeline.json", parameters: params, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            let tweets = response as! [NSDictionary]
+            
+            let tweetArray = Tweet.tweetWithArray(tweetDictionary: tweets)
+            success(tweetArray)
+        }) { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        }
+    }
     func compose(text: String, idTweetToReply: Int?, handleSuccess: @escaping () -> ()) {
         var params = [String: Any]()
         params["status"] = text as Any?
@@ -135,18 +162,6 @@ class ClientApi: BDBOAuth1SessionManager {
                 print(error.localizedDescription)
         }
     }
-    
-//    func reply(text: String, idTweet: Int, handleSuccess: @escaping () -> ()) {
-//        var params :[String: AnyObject] = [:]
-//        params["status"] = text as AnyObject?
-//        params["in_reply_to_status_id"] = idTweet as AnyObject?
-//        
-//        post("1.1/statuses/update.json", parameters: params, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
-//            handleSuccess()
-//        }) { (task: URLSessionDataTask?, error: Error) in
-//            print(error.localizedDescription)
-//        }
-//    }
     
     func logout() {
         User.currentUser = nil

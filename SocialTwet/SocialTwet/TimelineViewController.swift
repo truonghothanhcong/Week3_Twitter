@@ -70,10 +70,6 @@ class TimelineViewController: UIViewController, TypeTweetViewControllerDelegate 
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onLogout(_ sender: AnyObject) {
-        ClientApi.shareInstance.logout()
-    }
-    
     func refreshControlAction(refreshControl: UIRefreshControl) {
         tweetCount = 20
         ClientApi.shareInstance.homeTimeline(tweetCount: tweetCount, success: { (tweets: [Tweet]) in
@@ -238,6 +234,17 @@ extension TimelineViewController: TweetCellDelegate {
         replyVC.modalPresentationStyle = .overFullScreen;
         replyVC.view.backgroundColor = UIColor.clear
         self.present(replyVC, animated: true, completion: nil)
+    }
+    
+    func showProfileUser(tweetCell: TweetCell) {
+        let storyboart = UIStoryboard(name: "Main", bundle: nil)
+        let profileVC = storyboart.instantiateViewController(withIdentifier: "profileUserViewController") as! ProfileViewController
+        
+        // set data for view
+        profileVC.userId = tweetCell._tweet?.userId
+        
+        // open view
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
 }
 

@@ -18,6 +18,10 @@
 		F47370321DC30A7E00B67086 /* ClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47370311DC30A7E00B67086 /* ClientApi.swift */; };
 		F47370341DC311E700B67086 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47370331DC311E700B67086 /* TimelineViewController.swift */; };
 		F47370381DC33CC600B67086 /* DetailTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47370371DC33CC600B67086 /* DetailTweetViewController.swift */; };
+		F4BA72191DCC65A700819DE6 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA72181DCC65A700819DE6 /* HamburgerViewController.swift */; };
+		F4BA721B1DCC65BA00819DE6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA721A1DCC65BA00819DE6 /* MenuViewController.swift */; };
+		F4BA721D1DCC65E500819DE6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA721C1DCC65E500819DE6 /* ProfileViewController.swift */; };
+		F4BA721F1DCCBB2E00819DE6 /* menuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA721E1DCCBB2E00819DE6 /* menuCell.swift */; };
 		F4DA63E91DC47A29001E0D46 /* TypeTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA63E81DC47A29001E0D46 /* TypeTweetViewController.swift */; };
 		F4DA63EB1DC49B33001E0D46 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA63EA1DC49B33001E0D46 /* TweetCell.swift */; };
 		F4DA63ED1DC4B06B001E0D46 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA63EC1DC4B06B001E0D46 /* InfiniteScrollActivityView.swift */; };
@@ -39,6 +43,10 @@
 		F47370311DC30A7E00B67086 /* ClientApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientApi.swift; sourceTree = "<group>"; };
 		F47370331DC311E700B67086 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		F47370371DC33CC600B67086 /* DetailTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTweetViewController.swift; sourceTree = "<group>"; };
+		F4BA72181DCC65A700819DE6 /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
+		F4BA721A1DCC65BA00819DE6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F4BA721C1DCC65E500819DE6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F4BA721E1DCCBB2E00819DE6 /* menuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuCell.swift; sourceTree = "<group>"; };
 		F4DA63E81DC47A29001E0D46 /* TypeTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTweetViewController.swift; sourceTree = "<group>"; };
 		F4DA63EA1DC49B33001E0D46 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		F4DA63EC1DC4B06B001E0D46 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
@@ -131,6 +139,9 @@
 				F47370331DC311E700B67086 /* TimelineViewController.swift */,
 				F47370371DC33CC600B67086 /* DetailTweetViewController.swift */,
 				F4DA63E81DC47A29001E0D46 /* TypeTweetViewController.swift */,
+				F4BA72181DCC65A700819DE6 /* HamburgerViewController.swift */,
+				F4BA721A1DCC65BA00819DE6 /* MenuViewController.swift */,
+				F4BA721C1DCC65E500819DE6 /* ProfileViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 			children = (
 				F4DA63EC1DC4B06B001E0D46 /* InfiniteScrollActivityView.swift */,
 				F4DA63EA1DC49B33001E0D46 /* TweetCell.swift */,
+				F4BA721E1DCCBB2E00819DE6 /* menuCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -275,8 +287,12 @@
 				F4DA63EB1DC49B33001E0D46 /* TweetCell.swift in Sources */,
 				F473702E1DC3033F00B67086 /* User.swift in Sources */,
 				F47370321DC30A7E00B67086 /* ClientApi.swift in Sources */,
+				F4BA721B1DCC65BA00819DE6 /* MenuViewController.swift in Sources */,
+				F4BA721F1DCCBB2E00819DE6 /* menuCell.swift in Sources */,
 				F47370301DC3035900B67086 /* Tweet.swift in Sources */,
 				F47370381DC33CC600B67086 /* DetailTweetViewController.swift in Sources */,
+				F4BA721D1DCC65E500819DE6 /* ProfileViewController.swift in Sources */,
+				F4BA72191DCC65A700819DE6 /* HamburgerViewController.swift in Sources */,
 				F47370341DC311E700B67086 /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
