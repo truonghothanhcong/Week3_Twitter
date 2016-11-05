@@ -13,6 +13,8 @@ import MBProgressHUD
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var bannerScrollView: UIScrollView!
+    @IBOutlet weak var firstBannerImageView: UIImageView!
+    @IBOutlet weak var secondImageView: UIImageView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var screenNameLabel: UILabel!
@@ -59,14 +61,13 @@ class ProfileViewController: UIViewController {
                 print(error.localizedDescription)
             })
         }
+        
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(moveToNextPage), userInfo: nil, repeats: true)
     }
     
     func filUserInfomation(userInfo: User) {
-//        let bannerImageView = UIImageView()
-//        bannerImageView.contentMode = .scaleAspectFill
-//        bannerImageView.setImageWith(userInfo.profileBackgroundImageUrl!)
-//        bannerImageView.bounds.size = bannerScrollView.contentSize
-//        bannerScrollView.addSubview(bannerImageView)
+        firstBannerImageView.setImageWith(userInfo.profileBackgroundImageUrl!)
+        secondImageView.image = UIImage(named: "dummy")
         avatarImageView.setImageWith(userInfo.profileImageUrl!)
         nameLabel.text = userInfo.name!
         screenNameLabel.text = "@\(userInfo.screenName!)"
@@ -78,6 +79,20 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func moveToNextPage (){
+        let pageWidth:CGFloat = self.bannerScrollView.frame.width
+        let maxWidth:CGFloat = pageWidth * 2
+        let contentOffset:CGFloat = self.bannerScrollView.contentOffset.x
+        
+        var slideToX = contentOffset + pageWidth
+        
+        if  contentOffset + pageWidth == maxWidth
+        {
+            slideToX = 0
+        }
+        self.bannerScrollView.scrollRectToVisible(CGRect(x:slideToX, y:0, width:pageWidth, height:self.bannerScrollView.frame.height), animated: true)
     }
 }
 
@@ -172,5 +187,16 @@ extension ProfileViewController: TweetCellDelegate {
         replyVC.modalPresentationStyle = .overFullScreen;
         replyVC.view.backgroundColor = UIColor.clear
         self.present(replyVC, animated: true, completion: nil)
+    }
+    
+    func showProfileUser(tweetCell: TweetCell) {
+        let storyboart = UIStoryboard(name: "Main", bundle: nil)
+        let profileVC = storyboart.instantiateViewController(withIdentifier: "profileUserViewController") as! ProfileViewController
+        
+        // set data for view
+        profileVC.userId = tweetCell._tweet?.userId
+        
+        // open view
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
 }
