@@ -252,7 +252,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFa-Za-AMs">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFa-Za-AMs" userLabel="Header View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="120"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgC-nG-g7f">
@@ -281,12 +281,16 @@
                                             <constraint firstAttribute="bottom" secondItem="tv5-cd-Rbw" secondAttribute="bottom" id="oaw-ZH-cD7"/>
                                             <constraint firstAttribute="trailing" secondItem="tv5-cd-Rbw" secondAttribute="trailing" id="s1I-8m-dzj"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="adZ-Ll-uXQ" appends="YES" id="fD4-F1-JBZ"/>
+                                        </connections>
                                     </scrollView>
-                                    <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSD-hg-Fi2">
+                                    <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSD-hg-Fi2">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="B5p-FT-J5L">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <gestureRecognizers/>
                                         </view>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
@@ -633,9 +637,12 @@
                     <connections>
                         <outlet property="avatarImageView" destination="pty-FF-jJx" id="xXl-wT-5PC"/>
                         <outlet property="bannerScrollView" destination="lgC-nG-g7f" id="EMt-m0-6Bc"/>
+                        <outlet property="blurEffectView" destination="bSD-hg-Fi2" id="uBH-Gq-7kb"/>
                         <outlet property="firstBannerImageView" destination="GUP-UA-ptx" id="TzA-Sm-o2h"/>
                         <outlet property="followerCountLabel" destination="HRy-QC-lNI" id="pdH-Bp-RaF"/>
                         <outlet property="followingCountLabel" destination="ZWg-1Q-NUb" id="DjL-kN-Olj"/>
+                        <outlet property="headerView" destination="FFa-Za-AMs" id="NVR-k7-FvG"/>
+                        <outlet property="headerViewHeightConstrant" destination="070-ED-2jp" id="edn-BT-5Yf"/>
                         <outlet property="nameLabel" destination="pS5-vn-r7M" id="Vbh-8D-vbQ"/>
                         <outlet property="screenNameLabel" destination="mMR-ec-w10" id="6wG-AX-SdZ"/>
                         <outlet property="secondImageView" destination="tv5-cd-Rbw" id="BDx-h2-ndR"/>
@@ -644,6 +651,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR6-0r-zgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="adZ-Ll-uXQ">
+                    <connections>
+                        <action selector="panToZoom:" destination="0ll-xz-cRk" id="NRv-MX-MCc"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1331.25" y="1531.6901408450703"/>
         </scene>

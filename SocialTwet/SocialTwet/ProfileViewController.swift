@@ -12,6 +12,9 @@ import MBProgressHUD
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var headerViewHeightConstrant: NSLayoutConstraint!
+    @IBOutlet weak var blurEffectView: UIVisualEffectView!
     @IBOutlet weak var bannerScrollView: UIScrollView!
     @IBOutlet weak var firstBannerImageView: UIImageView!
     @IBOutlet weak var secondImageView: UIImageView!
@@ -79,6 +82,24 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func panToZoom(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: self.bannerScrollView)
+        
+        print(translation.y)
+        
+        if sender.state == UIGestureRecognizerState.changed {
+            if translation.y > 0 && headerViewHeightConstrant.constant < 140 {
+                blurEffectView.alpha += (translation.y / 20)
+                headerViewHeightConstrant.constant += translation.y
+            }
+        } else if sender.state == UIGestureRecognizerState.ended {
+            blurEffectView.alpha = 0
+            headerViewHeightConstrant.constant = 120
+        }
+        
+        
     }
     
     func moveToNextPage (){
